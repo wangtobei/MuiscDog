@@ -9,6 +9,7 @@ import Menu from "./components/Menu";
 import Head from "./components/head";
 import Player from "./components/player";
 import store from "./store";
+import SongSheetDetail from './components/songsheet/detail'
 import { Provider } from "react-redux";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 
@@ -21,6 +22,7 @@ ReactDOM.render(
       <div className="main">
         <Route path="/" component={Home} exact></Route>
         <Route path="/search/:keywords" component={Search} exact></Route>
+        <Route path="/songsheet/:songsheetid" component={SongSheetDetail} exact></Route>
       </div>
       <Provider store={store}>
         <Player></Player>

@@ -2,13 +2,9 @@ import React from "react";
 import { Row, Col } from "antd";
 import "../../axios/getNewSongInfo";
 import getNewSongInfo from "../../axios/getNewSongInfo";
-import getMusicUrl from "../../axios/getMusicUrl";
+
 import MusicItem from "../musicitem";
-import getMusicDetail from "../../axios/getMusicDetail";
-import {
-  ChangeCurrentMuiscUrl,
-  ChangeCurrentMusicPic,
-} from "../../store/actions/action";
+
 class NewSong extends React.Component {
   constructor(props) {
     super(props);
@@ -23,16 +19,7 @@ class NewSong extends React.Component {
       });
     });
   }
-  ChangeMuisc(id) {
-    getMusicUrl(id).then((res) => {
-     let MusicUrl = res.data.data[0].url;
-      ChangeCurrentMuiscUrl(MusicUrl,"playing");
-    });
-    getMusicDetail(id).then((res) => {
-      let MusicPic = res.data.songs[0].al.picUrl;
-      ChangeCurrentMusicPic(MusicPic);
-    });
-  }
+  
   render() {
     return (
       <div>
@@ -43,9 +30,9 @@ class NewSong extends React.Component {
               <Col
                 span={11}
                 key={item.id}
-                onClick={this.ChangeMuisc.bind(this, item.id)}
               >
                 <MusicItem
+                  id={item.id}
                   picUrl={item.picUrl}
                   name={item.name}
                   artists={item.song.artists}

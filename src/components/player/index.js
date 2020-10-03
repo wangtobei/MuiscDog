@@ -12,8 +12,8 @@ class Player extends React.Component {
   constructor(props) {
     super(props);
     this.Changevalue = this.Changevalue.bind(this);
-    this.handleChange = this.handleChange.bind(this);
     this.SetMusicDurtion = this.SetMusicDurtion.bind(this);
+    this.HandleChange = this.HandleChange.bind(this);
     this.state = {
       PlayState: this.props.Status, //播放器的状态
       value: 0,
@@ -21,7 +21,7 @@ class Player extends React.Component {
     };
   }
   //props改变后重新修改state的值 
-  //下面这个生命周期函数官方不在推荐使用，我懒得改了  https://zhuanlan.zhihu.com/p/89494013
+  //下面这个生命周期函数官方不再推荐使用，我懒得改了  https://zhuanlan.zhihu.com/p/89494013
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.Status !== this.state.PlayState) {
       this.setState({
@@ -29,11 +29,11 @@ class Player extends React.Component {
       });
     }
   }
-  //进度条
-  handleChange = (value) => {
+  //进度条修改音乐进度
+  HandleChange = (value) => {
     this.refs.audio.currentTime = value * this.state.duration;
   };
-  //音乐更新
+  //音乐自动更新进度
   Changevalue(value) {
     let currentTime = value.target.currentTime;
     this.setState({
@@ -92,11 +92,11 @@ class Player extends React.Component {
         <div>
           <Slider
             tipFormatter={null}
-            onChange={this.handleChange}
+            onChange={this.HandleChange}
             value={this.state.value}
             min={0}
             max={1}
-            step={0.01}
+            step={0.001}
           />
           <Image className="musicimg" src={this.props.MusicPic} />
           <div className="ctrlbtn">
@@ -111,7 +111,7 @@ class Player extends React.Component {
     );
   }
 }
-//使用了react-redux 可以更加方便的与redux使用
+//使用了react-redux 可以更加方便的与redux结合
 const stateToprops = (state) => {
   return {
     MuiscUrl: state.CurrentMusicUrl,
