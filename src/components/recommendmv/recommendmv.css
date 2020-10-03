@@ -1,0 +1,20 @@
+.recommendmvitem {
+  margin: 5px;
+  width: 250px;
+  margin-left: 15px;
+}
+.recommendcard {
+  width: 220px;
+  height: 120px;
+}
+.recommendname {
+  display: inline-block;
+  width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /*加宽度width属来兼容部分浏览*/
+}
+.recommendmv {
+  width: 100%;
+  margin-top: 10px;
+}

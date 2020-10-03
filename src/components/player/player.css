@@ -1,0 +1,19 @@
+.player{
+    width: 100%;
+    height: 90px;
+    z-index: 1000;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.musicimg{
+    width: 50px;
+    margin-left: 10px;
+    float: left;
+}
+.ctrlbtn{
+    width: 150px;
+    margin: auto;
+}

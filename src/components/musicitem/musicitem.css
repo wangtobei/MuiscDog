@@ -1,0 +1,37 @@
+.musicitem {
+  width: 90%;
+  height: 70px;
+  padding: 5px;
+}
+.musicitem:hover {
+  background-color: #f5f5f5;
+  float: left;
+}
+.cover {
+  width: 60px;
+  height: 60px;
+  float: left;
+padding: 2px;
+}
+.info {
+  width: 80%;
+  float: left;
+  height: 70px;
+}
+.name {
+  margin-left: 10px;
+  height: 30px;
+  width: 100%;
+  text-overflow: ellipsis;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /*加宽度width属来兼容部分浏览*/
+}
+.artists {
+  height: 30px;
+  text-overflow: ellipsis;
+}
+.artist {
+  margin-left: 10px;
+}
