@@ -71,7 +71,6 @@ class Search extends Component {
     });
   }
   ChangeCurrentPage(page, pageSize) {
-    console.log(page);
     this.setState({
       page: page - 1,
     });
@@ -103,6 +102,7 @@ class Search extends Component {
           size="small"
           rowKey="id"
           pagination={{
+            defaultCurrent:1,
             defaultPageSize: 20,
             onChange: this.ChangeCurrentPage.bind(this),
             total: this.state.songCount,

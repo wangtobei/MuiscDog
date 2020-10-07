@@ -34,7 +34,7 @@ class MyMenu extends Component {
             <NavLink to="/songsheet">推荐歌单</NavLink>
           </Menu.Item>
           <Menu.Item key="3" icon={<ContainerOutlined />}>
-            <NavLink to="/find">精品MV</NavLink>
+            <NavLink to="/mv">精品MV</NavLink>
           </Menu.Item>
         </Menu>
       </div>

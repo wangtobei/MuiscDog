@@ -9,20 +9,25 @@ import Menu from "./components/Menu";
 import Head from "./components/head";
 import Player from "./components/player";
 import store from "./store";
-import SongSheetDetail from './components/songsheet/detail'
+import SongSheetDetail from "./components/songsheet/detail";
+import MvDetail from "./components/mvdetail";
 import { Provider } from "react-redux";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <div>
-    
     <Router>
-    <Head></Head>
+      <Head></Head>
       <Menu></Menu>
       <div className="main">
         <Route path="/" component={Home} exact></Route>
         <Route path="/search/:keywords" component={Search} exact></Route>
-        <Route path="/songsheet/:songsheetid" component={SongSheetDetail} exact></Route>
+        <Route
+          path="/songsheet/:songsheetid"
+          component={SongSheetDetail}
+          exact
+        ></Route>
+        <Route path="/mv/:mvid" component={MvDetail} exact></Route>
       </div>
       <Provider store={store}>
         <Player></Player>

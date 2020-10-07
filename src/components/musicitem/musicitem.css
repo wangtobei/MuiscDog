@@ -1,6 +1,6 @@
 .musicitem {
   width: 90%;
-  height: 70px;
+  height: 80px;
   padding: 5px;
 }
 .musicitem:hover {
@@ -11,7 +11,8 @@
   width: 60px;
   height: 60px;
   float: left;
-padding: 2px;
+  padding: 2px;
+  overflow: hidden;
 }
 .info {
   width: 80%;
@@ -30,7 +31,11 @@ padding: 2px;
 }
 .artists {
   height: 30px;
+  width: 100%;
   text-overflow: ellipsis;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .artist {
   margin-left: 10px;

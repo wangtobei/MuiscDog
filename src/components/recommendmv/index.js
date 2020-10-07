@@ -3,6 +3,7 @@ import { Row, Col } from "antd";
 import { Card } from "antd";
 import getRecommendMv from "../../axios/getRecommendMv";
 import "./recommendmv.css";
+import { withRouter } from "react-router-dom";
 class RecMv extends Component {
   constructor(props) {
     super(props);
@@ -17,6 +18,9 @@ class RecMv extends Component {
       });
     });
   }
+  gotoMvDeatails(id) {
+    this.props.history.push("/mv/" + id);
+  }
   render() {
     return (
       <div className="recommendmv">
@@ -25,8 +29,11 @@ class RecMv extends Component {
           {this.state.RecMv.map((item) => {
             return (
               <Col span={5} key={item.id} className="recommendmvitem">
-                <Card hoverable cover={<img src={item.picUrl} alt="图片走丢了~" />}
-                className="recommendcard"
+                <Card
+                  hoverable
+                  cover={<img src={item.picUrl} alt="图片走丢了~" />}
+                  className="recommendcard"
+                  onClick={this.gotoMvDeatails.bind(this,item.id)}
                 ></Card>
                 <span className="recommendname">{item.name}</span>
               </Col>
@@ -37,4 +44,4 @@ class RecMv extends Component {
     );
   }
 }
-export default RecMv;
+export default withRouter(RecMv);

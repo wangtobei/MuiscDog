@@ -1,10 +1,9 @@
-//axios获取搜索
+//axios获取搜索结果
 import store from "../store";
 import axios from "axios";
 export default (page, keywords) => {
-  console.log("搜索")
   const state = store.getState();
   return axios.get(
-    state.api + "/search?offset=" + page + "&&limit=20&&keywords=" + keywords
+    state.api + "/search?offset=" + page*20 + "&&limit=20&&keywords=" + keywords
   );
 };

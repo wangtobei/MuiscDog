@@ -19,7 +19,7 @@
   width: 100%;
   margin-top: 10px;
 }
-.songsheetdetails{
+.songsheetdetails {
   margin-top: 10px;
 }
 .example {
@@ -27,4 +27,28 @@
   margin-bottom: 20px;
   padding: 30px 50px;
   margin: 20px 0;
+}
+.pagination {
+  text-align: center;
+}
+.songsheethead{
+  height: 150px;
+}
+.coverimg {
+  width: 150px;
+  margin: 10px;
+  margin-left: 20px;
+  float: left;
+}
+.detailsongheetname {
+  margin-top: 20px;
+  color: #1da57a;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.songsheetdetailtag{
+  margin-top: 20px;
+}
+.songsheetdetailtags{
+  margin-right: 10px;
 }

@@ -1,0 +1,15 @@
+.videoplayer {
+  margin-top: 20px;
+  width: 750px;
+  float: left;
+}
+.similarmv {
+  float: left;
+  width: 300px;
+  margin-left: 20px;
+}
+.similarmvitem{
+  width: 200px;
+  height: 100px;
+  margin-bottom: 20px;
+}
