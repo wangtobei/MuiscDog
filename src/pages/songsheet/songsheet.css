@@ -1,0 +1,27 @@
+.highqualitysongsheetcover {
+  width: 200px;
+  padding: 10px;
+  float: left;
+}
+.highquality {
+  margin-top: 10px;
+  width: 95%;
+  height: 200px;
+  border-radius: 10px;
+}
+.qualitydesc {
+    padding: 10px;
+    margin-left: 200px;
+    height:120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.highqualitytitle{
+    font-size: 30px;
+    font-weight: 800;
+    margin-left: 200px;
+    height: 50px;
+}
+.cardimg{
+    height: 180px;
+}

@@ -42,6 +42,7 @@ class Search extends Component {
       page: 0,
       songCount: 0,
     };
+    this.ChangeCurrentPage = this.ChangeCurrentPage.bind(this);
   }
   //再次搜索歌曲的时候修改了keywords 使用下面这个可以让数据重新渲染
   UNSAFE_componentWillReceiveProps(props) {
@@ -74,7 +75,7 @@ class Search extends Component {
     this.setState({
       page: page - 1,
     });
-    search(this.state.page, this.state.keywords).then((res) => {
+    search(page - 1, this.state.keywords).then((res) => {
       this.setState({
         data: res.data.result.songs,
       });
@@ -102,9 +103,9 @@ class Search extends Component {
           size="small"
           rowKey="id"
           pagination={{
-            defaultCurrent:1,
+            current: this.state.page + 1,
             defaultPageSize: 20,
-            onChange: this.ChangeCurrentPage.bind(this),
+            onChange: this.ChangeCurrentPage,
             total: this.state.songCount,
             showSizeChanger: false,
             position: ["bottomCenter"],

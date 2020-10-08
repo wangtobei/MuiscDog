@@ -1,0 +1,21 @@
+.mvtype {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.mvitem {
+  margin: 20px;
+  width: 200px;
+  height: 110px;
+}
+.mvcover {
+  width: 200px;
+}
+.mvname {
+  width: 200px;
+  margin-left: 20px;
+  text-overflow: ellipsis;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /*加宽度width属来兼容部分浏览*/
+}

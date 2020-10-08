@@ -36,7 +36,7 @@ class SongSheet extends Component {
                 <Card
                   hoverable
                   cover={
-                    <img alt={item.name} src={item.picUrl + "?param=600y600"} />
+                    <img alt={item.name} src={item.picUrl + "?param=600y600"} className="coverimg" />
                   }
                   className="songsheetcard"
                 ></Card>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import getSongSheetDetails from "../../axios/getSongSheetDetails";
 import MusicItem from "../musicitem";
-import { Row, Col, Spin, Pagination, Image, Avatar, Divider } from "antd";
+import { Row, Col, Spin, Pagination, Image, Avatar, Divider, Tag } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import "./songsheet.css";
 class SongSheetDeatail extends Component {
@@ -57,7 +57,7 @@ class SongSheetDeatail extends Component {
         <div className="songsheethead">
           <Image
             src={this.state.songsheet.coverImgUrl}
-            className="coverimg"
+            className="detailcoverimg"
           ></Image>
           <div className="detailsongheetname">{this.state.songsheet.name}</div>
           <Avatar
@@ -69,10 +69,14 @@ class SongSheetDeatail extends Component {
           <div className="songsheetdetailtag">
             标签：
             {this.state.songsheet.tags.map((item) => {
-              return <span key={item} className="songsheetdetailtags">{item}</span>;
+              return (
+                <Tag key={item} className="songsheetdetailtags" color="cyan">
+                  {item}
+                </Tag>
+              );
             })}
           </div>
-          <div>简介：{this.state.songsheet.description}</div>
+          <div className="songsheetdesp">简介：{this.state.songsheet.description}</div>
         </div>
         <Divider></Divider>
         <Spin
@@ -98,6 +102,7 @@ class SongSheetDeatail extends Component {
               })}
           </Row>
           <Pagination
+            current={this.state.currentpage}
             total={this.state.songs.length}
             showSizeChanger={false}
             onChange={this.ChangePage.bind(this)}

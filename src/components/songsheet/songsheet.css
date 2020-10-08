@@ -35,10 +35,9 @@
   height: 150px;
 }
 .coverimg {
-  width: 150px;
-  margin: 10px;
-  margin-left: 20px;
+  width: 180px;
   float: left;
+  height: 180px;
 }
 .detailsongheetname {
   margin-top: 20px;
@@ -51,4 +50,14 @@
 }
 .songsheetdetailtags{
   margin-right: 10px;
+}
+.songsheetdesp{
+  height: 45px;
+  overflow: hidden;
+}
+.detailcoverimg{
+  width: 150px;
+  float: left;
+  height: 150px;
+  margin: 10px;
 }
