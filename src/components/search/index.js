@@ -7,6 +7,7 @@ import getMusicDetail from "../../axios/getMusicDetail";
 import {
   ChangeCurrentMuiscUrl,
   ChangeCurrentMusicPic,
+  AddMusicToList,
 } from "../../store/actions/action";
 const columns = [
   {
@@ -90,6 +91,7 @@ class Search extends Component {
       let MusicPic = res.data.songs[0].al.picUrl;
       ChangeCurrentMusicPic(MusicPic);
     });
+    AddMusicToList(id);
   }
   render() {
     return (

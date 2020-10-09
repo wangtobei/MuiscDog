@@ -6,10 +6,10 @@ import { Image } from "antd";
 import {
   ChangeCurrentMuiscUrl,
   ChangeCurrentMusicPic,
+  AddMusicToList,
 } from "../../store/actions/action";
 class MusicItem extends React.Component {
   ChangeMusic(id) {
-    console.log(id);
     getMusicUrl(id).then((res) => {
       let MusicUrl = res.data.data[0].url;
       ChangeCurrentMuiscUrl(MusicUrl, "playing");
@@ -18,20 +18,22 @@ class MusicItem extends React.Component {
       let MusicPic = res.data.songs[0].al.picUrl;
       ChangeCurrentMusicPic(MusicPic);
     });
+    AddMusicToList(id);
   }
   render() {
     return (
-      <div
-        className="musicitem"
-      >
+      <div className="musicitem">
         <div className="cover">
           <Image
-            src={this.props.picUrl+'?param=60y60'}
+            src={this.props.picUrl + "?param=60y60"}
             alt="图片走丢了~"
             className="cover"
           ></Image>
         </div>
-        <div className="info" onClick={this.ChangeMusic.bind(this, this.props.id)}>
+        <div
+          className="info"
+          onClick={this.ChangeMusic.bind(this, this.props.id)}
+        >
           <div className="name">{this.props.name}</div>
           <div className="artists">
             {this.props.artists.map((item) => {
