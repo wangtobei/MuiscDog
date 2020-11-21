@@ -1,11 +1,7 @@
 .recommendmvitem {
   margin: 5px;
-  width: 250px;
+  width: 15%;
   margin-left: 15px;
-}
-.recommendcard {
-  width: 220px;
-  height: 120px;
 }
 .recommendname {
   display: inline-block;
@@ -15,6 +11,5 @@
   white-space: nowrap; /*加宽度width属来兼容部分浏览*/
 }
 .recommendmv {
-  width: 100%;
   margin-top: 10px;
 }

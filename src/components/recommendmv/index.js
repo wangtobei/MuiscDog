@@ -34,8 +34,7 @@ class RecMv extends Component {
                   cover={<img src={item.picUrl} alt="图片走丢了~" />}
                   className="recommendcard"
                   onClick={this.gotoMvDeatails.bind(this,item.id)}
-                ></Card>
-                <span className="recommendname">{item.name}</span>
+                > <span className="recommendname">{item.name}</span></Card>
               </Col>
             );
           })}

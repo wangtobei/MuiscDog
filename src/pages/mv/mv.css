@@ -2,17 +2,15 @@
   margin-top: 20px;
   margin-left: 10px;
 }
-.mvitem {
-  margin: 20px;
-  width: 200px;
-  height: 110px;
+.mvitem{
+  width:16% ;
+  margin: 1%;
 }
 .mvcover {
-  width: 200px;
+  width: 100%;
 }
 .mvname {
-  width: 200px;
-  margin-left: 20px;
+  width: 100%;
   text-overflow: ellipsis;
   display: inline-block;
   overflow: hidden;

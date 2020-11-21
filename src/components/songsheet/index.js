@@ -39,8 +39,8 @@ class SongSheet extends Component {
                     <img alt={item.name} src={item.picUrl + "?param=600y600"} className="coverimg" />
                   }
                   className="songsheetcard"
-                ></Card>
-                <span className="songsheetname">{item.name}</span>
+                ><span className="songsheetname">{item.name}</span></Card>
+                
               </Col>
             );
           })}

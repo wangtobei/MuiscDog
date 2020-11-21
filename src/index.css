@@ -3,6 +3,9 @@
     padding: 0;
 }
 .main{
-    margin-left: 240px;
+    margin-left: 17%;
     margin-bottom: 140px;
+}
+html{
+    min-width: 1200px;
 }

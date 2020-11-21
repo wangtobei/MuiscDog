@@ -54,42 +54,48 @@ class MvTop extends Component {
       <div>
         <div className="mvtype">
           地区：
-          <Button type="link"
+          <Button
+            type="link"
             onClick={() => {
               this.changeType("全部");
             }}
           >
             全部
           </Button>
-          <Button type="link"
+          <Button
+            type="link"
             onClick={() => {
               this.changeType("内地");
             }}
           >
             内地
           </Button>
-          <Button type="link"
+          <Button
+            type="link"
             onClick={() => {
               this.changeType("港台");
             }}
           >
             港台
           </Button>
-          <Button type="link"
+          <Button
+            type="link"
             onClick={() => {
               this.changeType("欧美");
             }}
           >
             欧美
           </Button>
-          <Button type="link"
+          <Button
+            type="link"
             onClick={() => {
               this.changeType("日本");
             }}
           >
             日本
           </Button>
-          <Button type="link"
+          <Button
+            type="link"
             onClick={() => {
               this.changeType("韩国");
             }}
@@ -100,20 +106,21 @@ class MvTop extends Component {
         <Row>
           {this.state.mvlist.map((item) => {
             return (
-              <Col key={item.id}>
+              <Col key={item.id}
+              className="mvitem"
+              >
                 <Card
                   onClick={this.gotoMvDeatails.bind(this, item.id)}
-                  className="mvitem"
                   hoverable
-                  cover={
-                    <img alt="example" src={item.cover} className="mvcover" />
-                  }
-                ></Card>
-                <span className="mvname">{item.name}</span>
+                  cover={<img alt="" src={item.cover} className="mvcover" />}
+                >
+                  <span className="mvname">{item.name}</span>
+                </Card>
               </Col>
             );
           })}
         </Row>
+        <br />
         <Pagination
           current={this.state.currentpage + 1}
           total={this.state.mvcount}

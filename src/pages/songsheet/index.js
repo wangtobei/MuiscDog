@@ -125,22 +125,21 @@ export default class SongSheet extends Component {
           {this.state.songsheetlist.map((item) => {
             return (
               <Col
+              span={4}
                 key={item.id}
                 className="songsheetitem"
                 onClick={this.ShowSongSheetDetail.bind(this, item.id)}
               >
                 <Card
                   hoverable
-                  className="songsheetcard"
                   cover={
                     <img
                       src={item.coverImgUrl + "?param120y120"}
                       alt="图片走丢了~"
-                      className="cardimg"
                     />
                   }
-                ></Card>
-                <span className="songsheetname">{item.name}</span>
+                > <span className="songsheetname">{item.name}</span></Card>
+               
               </Col>
             );
           })}
