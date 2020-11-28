@@ -28,6 +28,7 @@ ReactDOM.render(
         <Route path="/mv/:mvid" component={MvDetail} exact></Route>
         <Route path="/mv/" component={MvTop} exact></Route>
         <Route path="/songsheet/" component={SongSheet} exact></Route>
+        <div style={{height:"100px"}}></div>
       </div>
       <Provider store={store}>
         <Player></Player>
