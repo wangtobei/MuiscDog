@@ -4,6 +4,7 @@ import {
   PieChartOutlined,
   DesktopOutlined,
   ContainerOutlined,
+  GithubOutlined
 } from "@ant-design/icons";
 import "./menu.css";
 import { NavLink } from "react-router-dom";
@@ -35,6 +36,9 @@ class MyMenu extends Component {
           </Menu.Item>
           <Menu.Item key="3" icon={<ContainerOutlined />}>
             <NavLink to="/mv">精品MV</NavLink>
+          </Menu.Item>
+          <Menu.Item key="4" icon={<GithubOutlined />}>
+              <a href="https://github.com/wangtobei/MusicDog" target="_blank" rel="noopener noreferrer">开源地址</a>
           </Menu.Item>
         </Menu>
       </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import "./head.css";
 import { Input } from "antd";
-
 import { withRouter } from "react-router-dom";
 const { Search } = Input;
 class Head extends React.Component {
